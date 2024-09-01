@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let year = startYear; year <= currentYear; year++) {
             const li = document.createElement("li");
             const a = document.createElement("a");
-            a.href = `../Pages/Execom${year}.html`;
+            a.href = `Pages/Execom${year}.html`;
             a.textContent = `ExeCom ${year}`;
             li.appendChild(a);
             dropdown.appendChild(li);
