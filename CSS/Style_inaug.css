@@ -1,0 +1,121 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Main content*/
+.team {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('bckgrd7.jpg'); /* Ensure the path is correct */
+    background-attachment: fixed;
+    background-size:cover;
+    background-position: center;
+    overflow-y: auto; /* Allow vertical scrolling */
+    margin: 0px;
+}
+
+/*ExeCom 2024 Members*/
+.team h2 {
+    margin-bottom: 65px;
+    margin-top: -10px;
+    font-size: 60px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.team ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.team li {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 200px;
+    text-align: center;
+}
+.team img {
+    width: 300;
+    height: 400;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px;
+}
+.team a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+.team a:hover {
+    text-decoration: underline;
+    transition: all 0.3s ease-in-out;
+}
+.team p {
+    margin: 0;
+    color: #000000;
+}
+
+.team button{
+    margin: 0;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.img-gallery{
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+
+.img-gallery img{
+    width: 100%;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.img-gallery img:hover{
+    transform: scale(1.0) rotate(-10deg);
+    border-radius: 20px;
+    box-shadow: 0 30px 100px rgba(0, 0, 0, 0.5);
+}
+
+.full-img{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.full-img img{
+    width: 150%;
+    max-width: 500px;
+}
+
+.full-img span{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapid Tracer 2024 - IEEE RAS Student Chapter</title>
+    <link rel="stylesheet" href="Style_inaug.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <link rel="stylesheet" href="header.css">
+        <div class="container">
+            <div class="specific-region">
+            <div class="logo">
+                <a href="https://www.ieee-ras.org/"><img src="ieee-logo.jpg" alt="IEEE Logo"/> <!-- Path to IEEE logo --></a>
+                
+                <a href="https://www.dsu.edu.in/">
+                <img href="https://www.dsu.edu.in/" src="logo-blue.png" alt="Dayananda Sagar University Logo"/> <!-- Path to DSU logo -->
+                </a>
+            </div>
+            </div>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="RAS Event.html">Events</a></li>
+                    <!-- <li><a href="#projects">Projects</a></li> -->
+                    <li><a href="RAS Sponsor.html">Sponsors</a></li>
+                    <li class="dropdown">
+                        <a href="#team" class="dropdown">ExeCom</a> 
+                        <ul class="dropdown_content" id="excom-dropdown">
+                            <!-- Dropdown content will be populated by JavaScript -->
+                        </ul>
+                    </li>
+                    <!-- End of dropdown section -->
+                    <li><a href="RAS Event.html#footer-container">Contact Us</a></li>
+                    <li><a href="https://www.ieee.org/membership-catalog/productdetail/showProductDetailPage.html?product=MEMRA024" target="_blank">Join Us</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <img src="hamburger.png" alt="Menu">
+                </div>
+            </nav>
+        </div>
+        <!-- <script src="script.js"></script> -->
+    </header>
+
+    <main>
+        <section class="team">
+        <h2>Rapid Tracer</h2>
+        <div class="img-gallery">
+            <img src="Rapid Tracer/rpd1.JPG" width="300" height="200" onclick="openfullimg(this.src)">
+            <img src="Rapid Tracer/rpd2.JPG" width="300" height="200" onclick="openfullimg(this.src)">
+            <img src="Rapid Tracer/rpd3.JPG" width="300" height="200" onclick="openfullimg(this.src)">
+            <img src="Rapid Tracer/rpd4.JPG" width="300" height="200" onclick="openfullimg(this.src)">
+            <img src="Rapid Tracer/rpd5.JPG" width="300" height="200" onclick="openfullimg(this.src)">
+            <img src="Rapid Tracer/rpd6.JPG" width="300" height="200" onclick="openfullimg(this.src)">
+            <img src="Rapid Tracer/rpd7.JPG" width="300" height="200" onclick="openfullimg(this.src)">
+            <img src="Rapid Tracer/rpd8.JPG" width="300" height="200" onclick="openfullimg(this.src)">
+            <img src="Rapid Tracer/rpd9.JPG" width="300" height="200" onclick="openfullimg(this.src)">
+            <img src="Rapid Tracer/rpd10.JPG" width="300" height="200" onclick="openfullimg(this.src)">
+            <img src="Rapid Tracer/rpd11.JPG" width="300" height="200" onclick="openfullimg(this.src)">
+            <img src="Rapid Tracer/rpd12.JPG" width="300" height="200" onclick="openfullimg(this.src)">
+            <img src="Rapid Tracer/rpd13.JPG" width="300" height="200" onclick="openfullimg(this.src)">
+            <img src="Rapid Tracer/rpd14.JPG" width="300" height="200" onclick="openfullimg(this.src)">
+            <img src="Rapid Tracer/rpd15.JPG" width="300" height="200" onclick="openfullimg(this.src)">
+            <img src="Rapid Tracer/rpd16.JPG" width="300" height="200" onclick="openfullimg(this.src)">
+        </div>
+
+        <div class="full-img" id="fullimgbox">
+            <img src="hero-background.jpg" id="fullimg">
+            <span onclick="closefullimg()">X</span>
+        </div>
+        <script>
+            var fullimgbox = document.getElementById("fullimgbox")
+            var fullimg = document.getElementById("fullimg")
+
+            function openfullimg(pic){
+                fullimgbox.style.display = "flex";
+                fullimg.src = pic;
+            }
+
+            function closefullimg(){
+                fullimgbox.style.display = "none"
+            }
+        </script>
+        </section>
+    </main>
+    <script src="script.js"></script>
+
+    <footer>
+        
+        <div class="footer-container" id="footer-container">
+            <div class="footer-left">
+                <h3>Contact Us</h3>
+                <p>Email: ieee-ras.sbc@dsu.edu.in</p>
+                <!-- <p>Phone: +1 (555) 123-4567</p> -->
+                <p>Address: Dayananda Sagar University Devarakaggalahalli, Harohalli, Kanakapura Road, Ramanagara Dt., Bengaluru – 562 112</p>
+            </div>
+            <div class="footer-center">
+                <h3>Follow Us</h3>
+                <ul class="social-links">
+                    <!-- <li><a href="#"><img src="facebook-icon.png" alt="Facebook"/></a></li> -->
+                    <!-- <li><a href="#"><img src="twitter-icon.png" alt="Twitter"/></a></li> -->
+                    <li><a href="https://www.instagram.com/ieee_ras_sbc_dsu/?next=%2F" target="_blank"><img src="insta.png" alt="Instagram"/></a></li>
+                    <li><a href="https://www.linkedin.com/company/ieee-ras-sbc-dsu-950339314/posts/?feedView=all" target="_blank"><img src="linkdin.png" alt="LinkedIn"/></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 IEEE RAS Student Chapter. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
