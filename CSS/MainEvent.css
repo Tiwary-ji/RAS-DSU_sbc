@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e2d5d6;
+}
+
+a {
+    margin: 0; /* Reset the margin to prevent layout issues */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    font-family: 'Times New Roman';
+}
+
+main {
+    padding: 20px;
+}
+
+#ongoing-events {
+    width: 93.5vw;
+    background-image: url('../Images/Logo&Backgrounds/EventsBckgrd.jpg');
+    background-size: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.event-image {
+    width: 30%;
+}
+
+.event-image img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.event-details {
+    max-width: 600px;
+    padding-left: 4%;
+}
+
+
+/* Base button styles */
+button {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff; /* Primary color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+/* Hover state */
+button:hover {
+    background-color: #0056b3; /* Darker shade for hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Active state */
+button:active {
+    background-color: #004080; /* Even darker shade when pressed */
+    transform: translateY(1px); /* Slight press effect */
+}
+
+/* Focus state */
+button:focus {
+    box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.5); /* Focus ring */
+}
+
+/* Disabled state */
+button:disabled {
+    background-color: #c0c0c0; /* Greyed-out color */
+    cursor: not-allowed;
+    transform: none; /* No lift effect */
+}

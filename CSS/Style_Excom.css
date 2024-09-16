@@ -4,7 +4,7 @@
 .team {
     text-align: center;
     padding: 50px 20px;
-    background: url('../Image/Background/bckgrd.jpg'); /* Ensure the path is correct */
+    background: url('../Images/Logo&Backgrounds/bckgrd.jpg'); /* Ensure the path is correct */
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
