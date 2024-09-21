@@ -1,24 +1,33 @@
-// Load the combined header and footer
-fetch('header-footer.html')
-    .then(response => response.text())
-    .then(data => {
-        // Create a temporary container to hold the fetched content
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = data;
+document.addEventListener('DOMContentLoaded', () => {
+    const currentYear = new Date().getFullYear();
+    const startYear = 2024;
+    const dropdown = document.getElementById("excom-dropdown");
 
-        // Extract and insert the header
-        const header = tempDiv.querySelector('header');
-        if (header) {
-            document.getElementById('header-placeholder').innerHTML = header.outerHTML;
+    if (dropdown) {
+        for (let year = startYear; year <= currentYear; year++) {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = `https://ras-dsu.github.io/ras_dsu/Execom/Execom${year}.html`;
+            a.textContent = `ExeCom ${year}`;
+            li.appendChild(a);
+            dropdown.appendChild(li);
         }
 
-        // Extract and insert the footer
-        const footer = tempDiv.querySelector('footer');
-        if (footer) {
-            document.getElementById('footer-placeholder').innerHTML = footer.outerHTML;
-        }
-    });
-
+        // Add event listener to toggle dropdown on click
+        const dropdownButton = document.querySelector('.dropdown > a'); // Select the anchor within the dropdown
+        dropdownButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            const dropdownContent = dropdownButton.nextElementSibling; // Get the next sibling which is the dropdown content
+            if (dropdownContent) {
+                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+            } else {
+                console.error("Dropdown content not found.");
+            }
+        });
+    } else {
+        console.error("Dropdown element not found.");
+    }
+});
 
 //add an event listener for hamburger
 document.addEventListener('DOMContentLoaded', function() {
