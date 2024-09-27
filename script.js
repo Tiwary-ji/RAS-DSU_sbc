@@ -1,7 +1,7 @@
 // Function to determine the relative path to 'header-footer.html'
 function getBasePath() {
     const depth = window.location.pathname.split('/').length - 2;
-    return '../'.repeat(depth) + '../Common/header-footer.html';
+    return '../'.repeat(depth) + 'ras_dsu/Common/header-footer.html';
 }
 
 // Fetch the header and footer HTML
