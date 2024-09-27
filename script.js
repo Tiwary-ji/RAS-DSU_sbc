@@ -14,7 +14,6 @@ fetch(getBasePath())
         return response.text();
     })
     .then(data => {
-        // Create a temporary container to hold the fetched content
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = data;
 
@@ -36,17 +35,13 @@ fetch(getBasePath())
             console.error('Footer element not found in header-footer.html');
         }
 
-        // Now add the event listener for the hamburger menu
+        // Add event listener for the hamburger menu
         const hamburger = document.getElementById('hamburger');
         const navPanel = document.getElementById('nav-links');
 
         if (hamburger && navPanel) {
             hamburger.addEventListener('click', function () {
-                if (navPanel.style.display === 'block') {
-                    navPanel.style.display = 'none';
-                } else {
-                    navPanel.style.display = 'block';
-                }
+                navPanel.style.display = (navPanel.style.display === 'block') ? 'none' : 'block';
             });
         } else {
             console.error("Hamburger or nav-links element not found.");
@@ -56,16 +51,9 @@ fetch(getBasePath())
         const dropdownLinks = document.querySelectorAll('.dropdown > a');
         dropdownLinks.forEach(link => {
             link.addEventListener('click', function(event) {
-                // Prevent the default link behavior
-                event.preventDefault();
-
-                // Toggle visibility of the dropdown menu
+                event.preventDefault(); // Prevent the default link behavior
                 const dropdownContent = this.nextElementSibling;
-                if (dropdownContent.style.display === 'block') {
-                    dropdownContent.style.display = 'none';
-                } else {
-                    dropdownContent.style.display = 'block';
-                }
+                dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
             });
         });
     })
