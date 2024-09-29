@@ -117,8 +117,8 @@ button:disabled {
 }
 
 .col img{
-    width: 390px;
-    height: 540px;
+    width: 360px;
+    height: 500px;
 }
 
 .row::after{
