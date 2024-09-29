@@ -95,3 +95,27 @@ button:disabled {
     cursor: not-allowed;
     transform: none; /* No lift effect */
 }
+
+/*Previous Events Page*/
+
+#previous-events {
+    width: 93.5vw;
+    background-image: url('../Images/Logo&Backgrounds/EventsBckgrd.jpg');
+    background-size: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.col{
+    float: left;
+    width: 300;
+    padding: 10px;
+}
+
+.row::after{
+    content:"";
+    display: table;
+    clear: both;
+}
