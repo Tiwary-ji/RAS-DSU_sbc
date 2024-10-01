@@ -109,10 +109,10 @@ button:disabled {
 }
 
 .col{
-    margin: 5px;
+    /* margin: 5px; */
     float: left;
-    width: 390px;
-    margin-right: 25px;
+    width: 380px;
+    margin: 10px;
 
 }
 
