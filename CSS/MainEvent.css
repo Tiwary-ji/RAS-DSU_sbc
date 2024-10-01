@@ -126,3 +126,72 @@ button:disabled {
     display: table;
     clear: both;
 }
+
+
+/* Media query for phone view */
+@media (max-width: 440px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #ongoing-events,
+    #previous-events {
+        width: 100%;
+        padding: 1px;
+        margin-bottom: 20px;
+    }
+
+    .event-card {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .event-image {
+        width: 100%;
+    }
+
+    .event-details {
+        padding: 0;
+        text-align: center;
+    }
+
+    .event-image img {
+        border-radius: 8px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 14px;
+        padding: 8px 15px;
+        border-radius: 4px;
+    }
+
+    .ec {
+        height: 1280.4px;
+        width: 300px
+    }
+
+    .col {
+        width: 100%;
+        margin: 5px 0;
+        margin-bottom: 15px;
+    }
+
+    .col img {
+        width: 100%;
+        height: auto;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
