@@ -43,6 +43,13 @@ fetch(getBasePath())
             hamburger.addEventListener('click', function () {
                 navPanel.style.display = (navPanel.style.display === 'block') ? 'none' : 'block';
             });
+
+            // Close navPanel when clicking outside
+            document.addEventListener('click', function (event) {
+                if (navPanel.style.display === 'block' && !hamburger.contains(event.target) && !navPanel.contains(event.target)) {
+                    navPanel.style.display = 'none';
+                }
+            });
         } else {
             console.error("Hamburger or nav-links element not found.");
         }
@@ -50,10 +57,21 @@ fetch(getBasePath())
         // Add event listeners to prevent default behavior of dropdown links
         const dropdownLinks = document.querySelectorAll('.dropdown > a');
         dropdownLinks.forEach(link => {
-            link.addEventListener('click', function(event) {
+            link.addEventListener('click', function (event) {
                 event.preventDefault(); // Prevent the default link behavior
                 const dropdownContent = this.nextElementSibling;
                 dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+            });
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function (event) {
+            dropdownLinks.forEach(link => {
+                const dropdownContent = link.nextElementSibling;
+                if (dropdownContent && dropdownContent.style.display === 'block' &&
+                    !dropdownContent.contains(event.target) && !link.contains(event.target)) {
+                    dropdownContent.style.display = 'none';
+                }
             });
         });
     })
