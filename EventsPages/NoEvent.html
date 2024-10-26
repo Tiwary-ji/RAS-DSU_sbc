@@ -7,20 +7,27 @@
     <script src="../script.js"></script>
     <link rel="stylesheet" href="../CSS/MainCSS.css">
     <style>
-        body {
+        .message {
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-            font-family: Arial, sans-serif;
-            background-color: #e2d5d6;
-            margin: 0;
-        }
-        .message {
             font-size: 50px;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             color: #000000;
+            height: 59vh;
+            background-color: #e2d5d6;
+            margin: 0;
         }
+
+        @media (max-width: 440px) {
+            .message {
+                font-size: 30px; /* Adjust font size for smaller screens */
+                padding: 20px; /* Add padding to avoid text edges touching screen sides */
+                text-align: center; /* Center text for readability */
+                height: 35vh; /* Adjust height if needed */
+            }
+        }
+
     </style>
 </head>
 <body>
