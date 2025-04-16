@@ -35,7 +35,25 @@
 </section>
 
 <div id="footer-placeholder"></div>
-<script src="script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const basePath = getBasePath();
+        fetch(basePath)
+            .then(response => response.text())
+            .then(data => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(data, 'text/html');
+                document.getElementById("header-placeholder").innerHTML = doc.querySelector('header').outerHTML;
+                document.getElementById("footer-placeholder").innerHTML = doc.querySelector('footer').outerHTML;
+            })
+            .catch(error => console.error('Error loading header and footer:', error));
+    });
+
+    function getBasePath() {
+        const depth = window.location.pathname.split('/').length - 2;
+        return '../'.repeat(depth) + 'ras_dsu/Common/header-footer.html';
+    }
+</script>
     
 </body>
 </html>
